@@ -1,0 +1,178 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2f363e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container{
+    width: 450px;
+    height: 550px;
+    overflow-y: auto;
+    text-align: center;
+    border-radius: 30px;
+    padding: 30px 50px;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+                10px 10px 70px rgba(0, 0, 0, 0.25),
+                inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+                inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+                inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+}
+.container::-webkit-scrollbar{
+    width: 12px;
+}
+.container::-webkit-scrollbar-track{
+    background-color: #95a5a6;
+    border: 1px solid #cacaca;
+    border-radius: 8px;
+}
+.container::-webkit-scrollbar-thumb {
+    background-color: #2c3e50;
+    border-radius: 8px;
+}
+@media(max-width:768px){
+    .container{
+    width: 400px;
+    height: 500px;
+    text-align: center;
+    border-radius: 25px;
+    padding: 25px 40px;
+    }
+}
+@media(max-width:502px){
+    .container{
+    width: 350px;
+    height: 450px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px 35px;
+    }
+}
+.container h2{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.75em;
+    font-weight: 600;
+    margin:0 0 10px;
+}
+form input[type="text"]{
+    width: 250px;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1em;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25), inset 2px 2px 5px rgba(0, 0, 0, 0.5), inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+form [type="submit"]{
+    width: 80px;
+    margin-left: 15px;
+    padding: 15px 0;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    color: tomato;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25), inset 2px 2px 5px rgba(0, 0, 0, 0.5), inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+#tasks_box{
+    margin: 50px 0 10px;
+}
+#tasks_box .task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+}
+#tasks_box .task p{
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25), inset 2px 2px 5px rgba(0, 0, 0, 0.5), inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+    width: calc(100% - 40px);
+    border-radius: 30px;
+    min-height: 45px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #1f83f2;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    padding: 0 30px 0 20px;
+    line-height: 45px;
+    word-wrap: break-word;
+    margin: 10px 0;
+}
+.task.done{
+    background-color: red;
+}
+#tasks_box .task p.done{
+    background-color: #2f363e;
+    color: #ffffff50;
+}
+#tasks_box .task .del{
+    width: 40px;
+    background-color: #ff2c74;
+    height: 30px;
+    color: #fff;
+    line-height: 30px;
+    font-weight: bold;
+    margin-left: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25), inset 2px 2px 5px rgba(126, 3, 3, 0.5), inset -3px -3px 5px rgba(229, 221, 221, 0.5);
+}
+#tasks_box .task .del.done{
+    background-color: #0fc959c7;
+    width: 50px;
+    filter:brightness(.8);
+}
+
+@media(max-width:768px){
+    .container h2{
+        font-size:1.40em
+    }
+    form input[type="text"]{
+    width: 240px;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 25px;
+    }
+    form [type="submit"]{
+    width: 60px;
+    margin-left: 10px;
+    padding: 10px 0;
+    border-radius: 30px;
+    font-size: 16px;
+    }
+    #tasks_box .task p{
+        border-radius: 30px;
+        min-height: 35px;
+        font-size: 16px;
+        ine-height: 35px;
+        margin: 5px 0;
+    }
+}
+@media(max-width:502px){
+    .container h2{
+        font-size:1.10em
+    }
+    form input[type="text"]{
+    width: 200px;
+    padding: 15px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+    }
+    form [type="submit"]{
+    width: 40px;
+    margin-left: 10px;
+    padding: 5px 0;
+    border-radius: 20px;
+    font-size: 12px;
+    }
+}
